@@ -1,0 +1,40 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  width="256"
+  height="256"
+>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- forma base -->
+  <path
+    d="
+      M128 16
+      L224 64
+      L160 224
+      H96
+      L32 64
+      Z
+    "
+    fill="url(#g)"
+  />
+
+  <!-- recorte interno (símbolo) -->
+  <path
+    d="
+      M96 80
+      L128 160
+      L160 80
+      H140
+      L128 120
+      L116 80
+      Z
+    "
+    fill="#0b1020"
+  />
+</svg>
