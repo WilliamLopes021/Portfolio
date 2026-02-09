@@ -1,11 +1,10 @@
-import SkillsDisplay from './SkillsDisplay';
+import SkillsDisplay from "./SkillsDisplay";
 
 const Banner = () => {
-
   return (
-    <div className="flex bg-slate-950 text-white p-6 px-12 justify-between">
+    <div className="flex flex-col md:flex-row bg-slate-950 text-white p-6 px-12 justify-between">
       <div className="font-header">
-        <h1 className="text-8xl leading-30">
+        <h1 className="md:text-8xl md:leading-30 text-6xl leading-18">
           {" "}
           Gabriel <br /> William{" "}
         </h1>
@@ -14,8 +13,8 @@ const Banner = () => {
         </h2>
       </div>
 
-      <div className="w-xl">
-        <div className="h-60 min-w-lg mb-10 flex items-center justify-center">
+      <div className="md:w-xl w-full">
+        <div className="h-60 min-w-lg mb-10 flex p-7 mt-5 md:items-center md:justify-center">
           <SkillsDisplay />
         </div>
         <p className="font-body text-lg">

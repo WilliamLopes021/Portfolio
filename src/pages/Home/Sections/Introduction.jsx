@@ -3,8 +3,8 @@ import Banner from "../../../assets/FirstBanner.png"
 const Introduction = () => {
   const textColor = `text-white bg-gray-900`;
   return (
-    <div className={`p-6 px-16 flex ${textColor}`}>
-      <div className="w-1/2 text-xl">
+    <div className={`p-6 md:px-16 md:flex ${textColor}`}>
+      <div className="md:w-1/2 text-xl">
         <h2 className="font-header text-3xl">Quem sou eu?</h2>
         <p className="font-body py-3">
           Olá, meu nome é Gabriel William e sou apaixonado por aprender. Meu
@@ -18,7 +18,7 @@ const Introduction = () => {
           adaptar as mais diversas situações de um projeto.
         </p>
       </div>
-      <div className="w-1/2 p-10 pb-6">
+      <div className="md:w-1/2 md:p-10 py-6">
         <img
           className="w-full rounded-sm"
           src={Banner}

@@ -7,6 +7,10 @@
   --font-body: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .custom-scroll {
   scrollbar-width: thin;
   scrollbar-color: #6b7280 transparent;

@@ -2,34 +2,45 @@ import { projectsList as projects } from "../../../storage/Projects";
 import secondImg from "../../../assets/secondImg.png";
 
 const Projects = () => {
-  const textColor = `text-white bg-gray-900`;
-
   return (
-    <div className={`p-6 px-16 flex ${textColor}`} id="Projetos">
-      <div className="w-1/2">
-        <h2 className="font-header text-3xl mb-5"> Projetos </h2>
-        <div className="w-full text-xl overflow-auto custom-scroll h-70">
-          {projects.map((project, i) => (
-            <div key={i} className="w-full flex flex-col gap-4 mb-6">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-semibold hover:underline"
-              >
-                {project.name}
-              </a>
+    <section
+      id="Projetos"
+      className="bg-gray-900 text-white px-6 md:px-16 py-10"
+    >
+      <div className="flex flex-col md:flex-row gap-10">
+        
+        <div className="w-full md:w-1/2">
+          <h2 className="font-header text-3xl mb-5">Projetos</h2>
 
-              <p className="text-base font-body">{project.desc}</p>
-            </div>
-          ))}
+          <div className="w-full text-xl overflow-auto custom-scroll max-h-72">
+            {projects.map((project, i) => (
+              <div key={i} className="flex flex-col gap-3 mb-6">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-semibold hover:underline"
+                >
+                  {project.name}
+                </a>
+
+                <p className="text-base font-body">
+                  {project.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/2 flex items-center justify-center">
+          <img
+            src={secondImg}
+            alt="Imagem"
+            className="w-full max-w-md rounded-sm"
+          />
         </div>
       </div>
-
-      <div className="w-1/2 p-10">
-        <img className="w-full rounded-sm" src={secondImg} alt="Imagem" />
-      </div>
-    </div>
+    </section>
   );
 };
 

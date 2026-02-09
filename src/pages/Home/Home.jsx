@@ -8,7 +8,7 @@ import Objectives from "./Sections/Objectives";
 const Home = () => {
   return (
     <>
-      <header>
+      <header className="flex-col">
         <NavBar />
         <Banner />
       </header>

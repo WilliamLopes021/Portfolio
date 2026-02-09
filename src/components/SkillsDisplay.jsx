@@ -15,27 +15,34 @@ const SkillsDisplay = () => {
     { ...skills[nextIdx], position: "side" },
   ];
 
-  const moveNext = () => setIndex((index + 1) % total);
-  const movePrev = () => setIndex((index - 1 + total) % total);
+  const moveNext = () => setIndex((i) => (i + 1) % total);
+  const movePrev = () => setIndex((i) => (i - 1 + total) % total);
 
   return (
-    <div className="flex flex-col items-center justify-center p-6">
-      <div className="flex items-center gap-8 h-64">
+    <section className="flex flex-col items-center justify-center px-6 py-10">
+      
+      <div className="flex items-center justify-center gap-6 md:gap-10 h-56 md:h-64">
         {visible.map((item, i) => {
           const Icon = item.icon;
-          const isFocus = i === 1;
-          const iconSize = isFocus ? 130 : 80;
+          const isCenter = i === 1;
 
           return (
             <div
               key={i}
-              className={`flex flex-col items-center transition-all duration-500 ${
-                isFocus ? "opacity-100 scale-110" : "opacity-40 scale-90"
-              }`}
+              className={`
+                flex flex-col items-center transition-all duration-500
+                ${isCenter ? "opacity-100 scale-110" : "opacity-40 scale-90"}
+                ${!isCenter ? "hidden md:flex" : "flex"}
+              `}
             >
-              <Icon size={iconSize} color={item.color} />
+              <Icon
+                size={isCenter ? 110 : 80}
+                color={item.color}
+              />
               <p
-                className={`mt-2 font-bold ${isFocus ? "text-xl" : "text-sm"}`}
+                className={`mt-2 font-bold ${
+                  isCenter ? "text-lg md:text-xl" : "text-sm"
+                }`}
               >
                 {item.name}
               </p>
@@ -44,21 +51,22 @@ const SkillsDisplay = () => {
         })}
       </div>
 
-      <div className="flex gap-10">
+      <div className="flex gap-10 mt-4">
         <button
-          onClick={() => movePrev()}
-          className="cursor-pointer hover:bg-slate-900 rounded-2xl p-2 transition-all duration-300"
+          onClick={movePrev}
+          className="p-2 rounded-2xl transition hover:bg-slate-900 cursor-pointer"
         >
-          <IoIosArrowBack size={30} />
+          <IoIosArrowBack size={28} />
         </button>
+
         <button
-          onClick={() => moveNext()}
-          className="cursor-pointer hover:bg-slate-900 rounded-2xl p-2 transition-all duration-300"
+          onClick={moveNext}
+          className="p-2 rounded-2xl transition hover:bg-slate-900 cursor-pointer"
         >
-          <IoIosArrowForward size={30} />
+          <IoIosArrowForward size={28} />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

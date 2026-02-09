@@ -3,10 +3,6 @@ import { FaJsSquare } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-import { BiLogoMongodb } from "react-icons/bi";
-import { GrMysql } from "react-icons/gr";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
 
 export const skills = [
   {

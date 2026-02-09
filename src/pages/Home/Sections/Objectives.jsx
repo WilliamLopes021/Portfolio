@@ -4,8 +4,8 @@ const Objectives = () => {
   const textColor = `text-white bg-gray-900`;
 
   return (
-    <div className={`p-6 px-16 flex ${textColor}`} id="Objetivos">
-      <div className="w-1/2 text-xl">
+    <div className={`md:p-6 px-6 py-10 md:px-16 md:flex ${textColor}`} id="Objetivos">
+      <div className="md:w-1/2 text-xl">
         <h2 className="font-header text-3xl"> Objetivos </h2>
         <p className="font-body py-3">
           Atualmente estou fazendo um curso sobre JavaScript/TypeScript e
@@ -15,7 +15,7 @@ const Objectives = () => {
           buscam resolver problemas reais e pertinente na vida das pessoas.
         </p>
       </div>
-      <div className="w-1/2 p-10">
+      <div className="md:w-1/2 md:p-10 py-4">
         <img className="w-full rounded-sm" src={thirdImg} alt="Imagem" />
       </div>
     </div>
